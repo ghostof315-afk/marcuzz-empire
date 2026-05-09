@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Full Mast Trading Co. | Men's Gear — Knives, Beard, Self Defense, Cologne</title>
+<meta name="description" content="Curated men's gear — tactical knives, beard care, self defense, cologne. Every product tested and hand-picked.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#e5e5e5;min-height:100vh}
+.hero{text-align:center;padding:50px 20px 30px;background:linear-gradient(180deg,rgba(255,255,255,.03),transparent)}
+.hero h1{font-size:clamp(28px,5vw,46px);font-weight:900;background:linear-gradient(135deg,#ff6b35,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px}
+.hero p{color:#888;font-size:18px;margin-bottom:24px}
+.nav{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.05)}
+.nav a{font-size:12px;color:#888;text-decoration:none;padding:6px 14px;border-radius:20px;border:1px solid rgba(255,255,255,.1);transition:all .2s}
+.nav a:hover,.nav a.active{background:#ff6b35;color:#000;border-color:#ff6b35}
+.section{padding:30px 20px;max-width:1200px;margin:0 auto}
+.section h2{font-size:22px;font-weight:700;margin-bottom:20px;color:#fff;padding-bottom:10px;border-bottom:2px solid #ff6b35}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin-bottom:40px}
+.pc{background:#141414;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:20px;transition:border-color .3s,transform .3s}
+.pc:hover{border-color:#ff6b35;transform:translateY(-4px)}
+.pi{text-align:center;min-height:140px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.pi img{max-height:160px;max-width:100%;object-fit:contain}
+.pn{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px}
+.pd{font-size:12px;color:#888;margin-bottom:10px;line-height:1.4}
+.pp{font-size:22px;font-weight:900;color:#ff6b35;margin-bottom:12px}
+.pb{display:block;text-align:center;padding:10px;background:#ff6b35;color:#000;font-weight:700;text-decoration:none;border-radius:6px;font-size:13px}
+.pb:hover{opacity:.85}
+.footer{text-align:center;padding:40px 20px;color:#666;font-size:12px;border-top:1px solid rgba(255,255,255,.05)}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a href="index.html">All Stores</a>
+<a href="02_fullmast.html">EDC/Tactical</a>
+<a href="16_foraging.html">Foraging</a>
+<a href="17_esp32_gadgets.html">ESP32</a>
+<a href="18_offgrid_solar.html">Solar</a>
+<a href="34_mens_store.html" class="active">Men's Gear</a>
+</nav>
+<div class="hero">
+<div style="font-size:48px;margin-bottom:12px">⚔️</div>
+<h1>Full Mast Trading Co.</h1>
+<p>Men's Gear — Knives • Beard • Self Defense • Cologne • Grooming</p>
+</div>
+<div class="section">
+<h2>⚔️ Knives & Blades</h2>
+<div class="grid" id="knives"></div>
+<h2>🧔 Beard Care</h2>
+<div class="grid" id="beard"></div>
+<h2>🛡️ Self Defense</h2>
+<div class="grid" id="selfdefense"></div>
+<h2>💎 Cologne & Fragrance</h2>
+<div class="grid" id="cologne"></div>
+<h2>🧴 Men's Grooming</h2>
+<div class="grid" id="grooming"></div>
+</div>
+<footer class="footer">
+<p>Full Mast Trading Co. — Part of the <a href="index.html" style="color:#ff6b35">Marcuzz Empire</a></p>
+<p style="margin-top:8px">As an Amazon Associate I earn from qualifying purchases. Tag: mshatraw90-20</p>
+</footer>
+<script>
+const products = {
+knives:[
+{name:"M48 Cyclone Knife",asin:"B01NAZK69G",price:".99",desc:"Tri-edged spiral blade, Vortec sheath, glass breaker pommel"},
+{name:"M48 Battle Scarred OD Cyclone",asin:"B0CXJM4Y6N",price:".99",desc:"Desert olive stonewashed 8in spiral blade, belt sheath"},
+{name:"Cold Steel SRK Survival Knife",asin:"B0002DBI6Q",price:".99",desc:"6in SK-5 carbon steel, Kray-Ex handle, serious working knife"},
+{name:"KABAR USMC Fixed Blade",asin:"B000BODUBQ",price:".99",desc:"Iconic 7in 1095 Cro-Van steel, leather sheath, American legend"},
+{name:"Smith and Wesson SWMP4L",asin:"B002OZYXIK",price:".99",desc:"Tactical folding knife, 3.1in blade, liner lock, pocket clip"},
+],
+beard:[
+{name:"Viking Revolution Complete Beard Kit",asin:"B01N5YHAAG",price:".99",desc:"6-piece kit — oil, balm, wash, conditioner, comb, boar brush"},
+{name:"Grave Before Shave Gentlemens Kit",asin:"B00NG44IPC",price:".99",desc:"5-piece with facial scrub, oil, balm, conditioning cream"},
+{name:"Cremo Beard Oil Forest Blend",asin:"B01HKXLBMA",price:".99",desc:"Eliminates itch, softens beard, no greasy feel"},
+],
+selfdefense:[
+{name:"SABRE Pepper Spray Keychain",asin:"B004D8N6YQ",price:".99",desc:"Police strength OC, 10 sec spray, UV dye, snap clip"},
+{name:"POM MK3 Pepper Spray",asin:"B09XKTMKR8",price:".99",desc:"18ft range, 360 degree performance, belt clip model"},
+{name:"MACE Pepper Gel",asin:"B07CXWFW5K",price:".99",desc:"No wind blowback, 20ft range, sticks on attacker"},
+{name:"Byrna Pepper Spray Max",asin:"B0C7SXZPXP",price:".99",desc:"Military strength OC plus tear gas, UV tracking dye"},
+{name:"Tactical Stun Gun Flashlight",asin:"B085TCKXS7",price:".99",desc:"Stun gun plus 300 lumen light combo, rechargeable"},
+],
+cologne:[
+{name:"Paco Rabanne 1 Million",asin:"B001DCWBNE",price:".99",desc:"Best selling mens fragrance, spicy fresh, 3.4oz"},
+{name:"Dior Sauvage EDT",asin:"B01HW8X8VY",price:".00",desc:"Fresh aromatic bergamot and ambroxan, 3.4oz"},
+{name:"Creed Aventus Impression",asin:"B09NWKBQVZ",price:".99",desc:"Pineapple birch musk, inspired by Creed Aventus"},
+],
+grooming:[
+{name:"Old Spice Swagger Body Wash",asin:"B008KRZNHM",price:".99",desc:"Lime and cedarwood, 16oz, smells incredible costs nothing"},
+{name:"Every Man Jack Face Wash",asin:"B0060QQMWQ",price:".99",desc:"Natural ingredients, daily mens face wash, removes oil"},
+]
+};
+const TAG="mshatraw90-20";
+Object.keys(products).forEach(cat=>{
+const el=document.getElementById(cat);
+if(!el)return;
+products[cat].forEach(p=>{
+const url="https://www.amazon.com/dp/"+p.asin+"/?tag="+TAG;
+const img="https://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN="+p.asin+"&Format=_SL250_&ID=AsinImage&MarketPlace=US&ServiceVersion=20070822&WS=1&tag="+TAG;
+el.innerHTML+=<div class="pc"><div class="pi"><img src="+img+" alt="+p.name+" loading="lazy" onerror="this.style.display='none'"></div><div class="pn">+p.name+</div><div class="pd">+p.desc+</div><div class="pp">+p.price+</div><a href="+url+" target="_blank" class="pb">View on Amazon →</a></div>;
+});
+});
+</script>
+</body>
+</html>
